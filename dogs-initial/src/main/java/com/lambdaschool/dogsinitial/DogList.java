@@ -1,6 +1,4 @@
-package com.lambdaschool.projectrestdogs;
-
-import com.lambdaschool.projectrestdogs.Dog;
+package com.lambdaschool.dogsinitial;
 
 import java.util.ArrayList;
 

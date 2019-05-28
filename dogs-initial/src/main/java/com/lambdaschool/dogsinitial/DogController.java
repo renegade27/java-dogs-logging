@@ -1,4 +1,4 @@
-package com.lambdaschool.projectrestdogs;
+package com.lambdaschool.dogsinitial;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,14 +17,14 @@ public class DogController
     @GetMapping(value = "/dogs")
     public ResponseEntity<?> getAllDogs()
     {
-        return new ResponseEntity<>(ProjectrestdogsApplication.ourDogList.dogList, HttpStatus.OK);
+        return new ResponseEntity<>(DogsinitialApplication.ourDogList.dogList, HttpStatus.OK);
     }
 
     // localhost:8080/dogs/{id}
     @GetMapping(value = "/{id}")
     public ResponseEntity<?> getDogDetail(@PathVariable long id)
     {
-        Dog rtnDog = ProjectrestdogsApplication.ourDogList.findDog(d -> (d.getId() == id));
+        Dog rtnDog = DogsinitialApplication.ourDogList.findDog(d -> (d.getId() == id));
         return new ResponseEntity<>(rtnDog, HttpStatus.OK);
     }
 
@@ -32,7 +32,7 @@ public class DogController
     @GetMapping(value = "/breeds/{breed}")
     public ResponseEntity<?> getDogBreeds (@PathVariable String breed)
     {
-        ArrayList<Dog> rtnDogs = ProjectrestdogsApplication.ourDogList.
+        ArrayList<Dog> rtnDogs = DogsinitialApplication.ourDogList.
                 findDogs(d -> d.getBreed().toUpperCase().equals(breed.toUpperCase()));
         return new ResponseEntity<>(rtnDogs, HttpStatus.OK);
     }

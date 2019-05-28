@@ -1,4 +1,4 @@
-package com.lambdaschool.projectrestdogs;
+package com.lambdaschool.dogsinitial;
 
 import java.util.concurrent.atomic.AtomicLong;
 

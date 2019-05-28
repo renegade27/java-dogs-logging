@@ -1,4 +1,4 @@
-package com.lambdaschool.projectrestdogs;
+package com.lambdaschool.dogsinitial;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

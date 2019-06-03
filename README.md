@@ -27,14 +27,14 @@ Create RabbitMQ messaging system with two queues
   * One for each time the /dogs/breeds/{breed} endpoint is accessed
   * Each message will contain the endpoint accessed, any parameters used, and the date and time of access. So, very similar to the information in the log. Note: this means a change to the MessageDetail Class - some like:  
     ```import java.io.Serializable;
-    import java.util.Date;
     
     public class MessageDetail implements Serializable
     {
         private String text;
-        private Date dateAccessed;
     ...
     }
+
+Note that RabbitMQ does not like the Java date and time formats. So to add Date and time of access to the RabbitMQ I am suggesting that your message text be something like "message text" + new Date(); That will give an acceptable date and time stamp at the end of your message.
 
 Create a separate application that reads messages from each queue, making sure to add to the message which queue it is from before displaying to the screen.
 

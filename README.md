@@ -20,7 +20,7 @@ Add appropriate logging routines. Required logging include
     * for example when a clients calls /dogs log should say "/dogs accessed"
     * include in log any appropriate parameters sent to the end point
     * for each log, add a date and time stamp.
-  * Note: put the log files under the directory /var/logs/lambdajx Feel free to create and necessary subdirectories.
+  * Note: put the log files under the directory /tmp/var/logs/lambdajx You may have to create some directories for this to work.
 
 Create RabbitMQ messaging system with two queues
   * One for each time the /dogs endpoints are accessed

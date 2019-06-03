@@ -29,5 +29,5 @@ Create RabbitMQ messaging system with two queues
 Create a separate application that reads messages from each queue, making sure to add to the message which queue it is from before displaying to the screen.
 
 Stretch Goal
-  * Create an application that reads messages from each queue and writes the message it a file for that queue. So all messages about creating dogs would be logged to a file about creating dogs; all messages about accessing /dogs would be logged to a file about accessing dogs,...
+  * Create an application that reads messages from each queue and writes the message to a log file for that queue. So all messages about accessing /dogs would be logged to a file about accessing dogs, all messages about accessing dogs/breeds would be logged to a file about accessing dogs/breeds. The log messages should still go to the console as well.
   * Create a message queue to receive a message each time a dog is created

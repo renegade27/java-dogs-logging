@@ -40,4 +40,4 @@ Create a separate application that reads messages from each queue, making sure t
 
 Stretch Goal
   * Create an application that reads messages from each queue and writes the message to a log file for that queue. So all messages about accessing /dogs would be logged to a file about accessing dogs, all messages about accessing dogs/breeds would be logged to a file about accessing dogs/breeds. The log messages should still go to the console as well.
-  * Create a message queue to receive a message each time a dog is created
+  * Create a message queue to receive a message each time an exception occurs. Have the listener read this queue as well.
